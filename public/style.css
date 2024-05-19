@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    background-color: #E5E5E5;
+    display: flex;
+    font-family: "Inter", sans-serif;
+}
+
+.white {
+    background-color: white;
+}
+
+.left-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 305px;
+    height: 1315px;
+}
+
+.prof_img {
+    width: 200px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.prof_intro {
+    text-align: center;
+}
+
+.prof_intro h3 {
+    font-size: 18px;
+}
+
+.prof_intro p {
+    font-size: 15px;
+    color: #767676;
+}
+
+.social {
+    display: flex;
+    margin: 20px 20px 40px 20px;
+    gap: 15px;
+}
+
+.social i {
+    color: #c47c0f;
+    font-size: 20px;
+}
+
+hr {
+    width: 200px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.label {
+    padding: 5px;
+    background-color: #ff9900;
+    color: black;
+    margin-right: 40px;
+    border-radius: 4px;
+}
+
+.value {
+    text-align: right;
+
+}
+
+.available {
+    color: green;
+}
+
+.language-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.language-name {
+    width: 135px;
+    margin-right: 30px;
+}
+
+.progress-bar {
+    width: 200px;
+    height: 5px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(to right, #ff9900, #ffcc00);
+}
+
+.full .progress-fill {
+    width: 100%;
+}
+
+.eighty .progress-fill {
+    width: 80%;
+}
+
+.eighty-five .progress-fill {
+    width: 85%;
+}
+
+.seventy-five .progress-fill {
+    width: 75%;
+}
+
+.sixty .progress-fill {
+    width: 60%;
+}
+
+.ninety .progress-fill {
+    width: 90%;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.skill-name {
+    width: 135px;
+    margin-right: 30px;
+}
+
+.extra_skills-icon {
+    color: #ff9900;
+    font-size: 22px;
+}
+
+.middle-frame {
+    margin: 0px 30px;
+    width: 971px;
+    height: 463px;
+    background-image: url("images/bg-img.svg");
+    background-size: cover;
+    display: flex;
+    position: relative;
+}
+
+.middle-frame::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.job-info {
+    margin: 40px 50px 10px 50px;
+}
+
+.job-position h2 {
+    font-size: 48px;
+}
+
+.job-description p {
+    font-size: 16px;
+}
+
+.hire-button button {
+    width: 155px;
+    height: 50px;
+    border: none;
+    padding: 20px;
+    background-color: #ff9900;
+    color: black;
+}
+
+.prof-image {
+    margin-right: 40px;
+}
+
+
+.right-frame {
+    width: 108px;
+    height: 1315px;
+}
+
+.buttons {
+    margin: 40px;
+    display: flex;
+    font-size: 30px;
+    gap: 70px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons i {
+    color: #767676;
+}
+
+.round {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.theme_switch {
+    margin-bottom: 200px;
+}
+
+.home-button a {
+    display: inline-block;
+    position: relative;
+}
+
+.home-label {
+    font-size: 18px;
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.home-button:hover .home-label {
+    opacity: 1;
+}
+
+.home-button i {
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover i {
+    background-color: transparent;
+    color: black;
+}
+
+/* projects_label */
+
+.projects-button a {
+    display: inline-block;
+    position: relative;
+}
+
+.projects-label {
+    font-size: 18px;
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.projects-button:hover .projects-label {
+    opacity: 1;
+}
+
+.projects-button i {
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.projects-button:hover i {
+    background-color: transparent;
+    color: black;
+}
+
+/* education_label */
+
+.education-button a {
+    display: inline-block;
+    position: relative;
+}
+
+.education-label {
+    font-size: 18px;
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.education-button:hover .education-label {
+    opacity: 1;
+}
+
+.education-button i {
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.education-button:hover i {
+    background-color: transparent;
+    color: black;
+}
+
+/* career_label */
+
+.career-button a {
+    display: inline-block;
+    position: relative;
+}
+
+.career-label {
+    font-size: 18px;
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.career-button:hover .career-label {
+    opacity: 1;
+}
+
+.career-button i {
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.career-button:hover i {
+    background-color: transparent;
+    color: black;
+}
+
+/* contact_label */
+
+.contact-button a {
+    display: inline-block;
+    position: relative;
+}
+
+.contact-label {
+    font-size: 18px;
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.contact-button:hover .contact-label {
+    opacity: 1;
+}
+
+.contact-button i {
+    font-size: 24px;
+    padding: 15px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover i {
+    background-color: transparent;
+    color: black;
+}
