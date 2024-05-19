@@ -38,7 +38,7 @@ app.get("/author", (req, res) => {
   });
 });
 
-const port = 3006;
+const port = 3000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
