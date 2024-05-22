@@ -10,11 +10,11 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <div class="left-frame  white">
+    <div class="left-frame white">
         <img src="/images/Profilee.svg" alt="" class="prof_img">
         <div class="prof_intro">
             <h3>Marco</h3>
-            <p><%=user.profession%></p>
+            <p><%= user.profession %></p>
         </div>
         <div class="social white">
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
@@ -28,53 +28,44 @@
         <div class="prof_info">
             <div class="info-item">
                 <span class="label">Age:</span>
-                <span class="value"><%=user.age%></span>
+                <span class="value"><%= user.age %></span>
             </div>
             <div class="info-item">
                 <span class="label">Residence:</span>
-                <span class="value"><%=user.residence%></span>
+                <span class="value"><%= user.residence %></span>
             </div>
             <div class="info-item">
                 <span class="label">Freelance:</span>
-                <span class="value available"><%=user.freelance%></span>
+                <span class="value available"><%= user.freelance %></span>
             </div>
             <div class="info-item">
                 <span class="label">Address:</span>
-                <span class="value"><%=user.adress%></span>
+                <span class="value"><%= user.address %></span>
             </div>
         </div>
         <hr>
         <div class="language-set">
             <h3>Languages</h3>
             <div class="language-item">
-                <span class="language-name"><%=user.Languages[0]%></span>
+                <span class="language-name"><%= user.Languages[0] %></span>
                 <div class="language-bar">
                     <div class="language-level" style="width: 100%;"></div>
                 </div>
                 <span class="skill-percentage">100%</span>
             </div>
-            <div class="progress-bar full">
-                <div class="progress-fill"></div>
-              </div>
             <div class="language-item">
                 <span class="language-name"><%= user.Languages[1] %></span>
                 <div class="language-bar">
-                    <div class="language-level" style="width: 100%;"></div>
+                    <div class="language-level" style="width: 80%;"></div>
                 </div>
                 <span class="skill-percentage">80%</span>
-            </div>
-            <div class="progress-bar eighty">
-                <div class="progress-fill"></div>
             </div>
             <div class="language-item">
                 <span class="language-name"><%= user.Languages[2] %></span>
                 <div class="language-bar">
-                    <div class="language-level" style="width: 100%;"></div>
+                    <div class="language-level" style="width: 60%;"></div>
                 </div>
                 <span class="skill-percentage">60%</span>
-            </div>
-            <div class="progress-bar sixty">
-                <div class="progress-fill"></div>
             </div>
         </div>        
         <hr>
@@ -83,52 +74,37 @@
             <div class="skill-item">
                 <span class="skill-name"><%= user.skills[0] %></span>
                 <div class="skill-bar">
-                    <div class="skill-level" style="width: 100%;"></div>
+                    <div class="skill-level" style="width: 90%;"></div>
                 </div>
                 <span class="skill-percentage">90%</span>
-            </div>
-            <div class="progress-bar ninety">
-                <div class="progress-fill"></div>
             </div>
             <div class="skill-item">
                 <span class="skill-name"><%= user.skills[1] %></span>
                 <div class="skill-bar">
-                    <div class="skill-level" style="width: 100%;"></div>
+                    <div class="skill-level" style="width: 85%;"></div>
                 </div>
                 <span class="skill-percentage">85%</span>
-            </div>
-            <div class="progress-bar eighty-five">
-                <div class="progress-fill"></div>
             </div>
             <div class="skill-item">
                 <span class="skill-name"><%= user.skills[2] %></span>
                 <div class="skill-bar">
-                    <div class="skill-level" style="width: 100%;"></div>
+                    <div class="skill-level" style="width: 80%;"></div>
                 </div>
                 <span class="skill-percentage">80%</span>
-            </div>
-            <div class="progress-bar eighty">
-                <div class="progress-fill"></div>
             </div>
             <div class="skill-item">
                 <span class="skill-name"><%= user.skills[3] %></span>
                 <div class="skill-bar">
-                    <div class="skill-level" style="width: 100%;"></div>
+                    <div class="skill-level" style="width: 75%;"></div>
                 </div>
                 <span class="skill-percentage">75%</span>
-            </div>
-            <div class="progress-bar seventy-five">
-                <div class="progress-fill"></div>
             </div>
             <div class="skill-item">
                 <span class="skill-name"><%= user.skills[4] %></span>
                 <div class="skill-bar">
-                    <div class="skill-level" style="width: 100%;"></div>
+                    <div class="skill-level" style="width: 85%;"></div>
                 </div>
                 <span class="skill-percentage">85%</span>
-            </div>
-            <div class="progress-bar eighty-five">
-                <div class="progress-fill"></div>
             </div>
         </div>
         <hr>
@@ -136,56 +112,93 @@
             <h3>Extra Skills</h3>
             <div class="extra_skills-item">        
                 <span class="extra_skills-icon"><i class="fa-solid fa-fill-drip"></i></span>
-                <span class="extra_skills-name">
-                    <%= user.extra_skills[0] %>
-                </span>
+                <span class="extra_skills-name"><%= user.extra_skills[0] %></span>
             </div>
             <div class="extra_skills-item">        
                 <span class="extra_skills-icon"><i class="fa-solid fa-fill-drip"></i></span>
-                <span class="extra_skills-name">
-                    <%= user.extra_skills[1] %>
-                </span>
+                <span class="extra_skills-name"><%= user.extra_skills[1] %></span>
             </div>
             <div class="extra_skills-item">        
                 <span class="extra_skills-icon"><i class="fa-solid fa-fill-drip"></i></span>
-                <span class="extra_skills-name">
-                    <%= user.extra_skills[2] %>
-                </span>
+                <span class="extra_skills-name"><%= user.extra_skills[2] %></span>
             </div>
             <div class="extra_skills-item">        
                 <span class="extra_skills-icon"><i class="fa-solid fa-fill-drip"></i></span>
-                <span class="extra_skills-name">
-                    <%= user.extra_skills[3] %>
-                </span>
+                <span class="extra_skills-name"><%= user.extra_skills[3] %></span>
             </div>
         </div>
     </div>
     
-    <div class="middle-frame ">
-        <div class="job-info">
-            <div class="job-position">
-                <h2><%=user.profession%> at <%=user.work_place%></h2>
+    <div class="middle-frame">
+        <div class="upper-frame">
+            <div class="job-info">
+                <div class="job-position">
+                    <h2><%= user.profession %> at <%= user.work_place %></h2>
+                </div>
+                <div class="job-description">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt ullam incidunt illum repellendus odio aliquam quasi quisquam, labore, error suscipit accusantium! Quis aliquam temporibus vel nemo nobis, doloremque error sapiente.</p>
+                </div>
+                <div class="hire-button">
+                    <button>HIRE ME -></button>
+                </div>
             </div>
-            <div class="job-description">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt ullam incidunt illum repellendus odio aliquam quasi quisquam, labore, error suscipit accusantium! Quis aliquam temporibus vel nemo nobis, doloremque error sapiente.</p>
-            </div>
-            <div class="hire-button">
-                <button>HIRE ME -></button>
+            <div class="prof-image">
+                <img src="/images/profile.svg" alt="">
             </div>
         </div>
-        <div class="prof-image">
-            <img src="/images/profile.svg" alt="">
-        </div>
+        <!-- <div class="lower-frame"> -->
+            <div class="services">
+                <div class="services_to_center">
+                    <h1>My Services</h1>
+                    <p><%= user.service_desc %></p>
+                </div>
+                <div class="myservice-container">
+                    <div class="myservice">
+                        <img src="/box_images/web-development.svg">
+                        <h5>Web development</h5>
+                        <p>Blog, E-commerce</p>
+                    </div>
+                    <div class="myservice">
+                        <img src="/images/game-development.png">
+                        <h5>UI/UX Design</h5>
+                        <p>Mobile Apps, Website Design</p>
+                    </div>
+                    <div class="myservice">
+                        <img src="/box_images/microphone.png">
+                        <h5>Sound Design</h5>
+                        <p>Voice Over, Beat Making</p>
+                    </div>
+                    <div class="myservice">
+                        <img src="/images/game-development.png">
+                        <h5>Game Design</h5>
+                        <p>Character Design, Props & Objects</p>
+                    </div>
+                    <div class="myservice">
+                        <img src="/box_images/Photographer.png">
+                        <h5>Photography</h5>
+                        <p>Portrait, Product Photography</p>
+                    </div>
+                    <div class="myservice">
+                        <h5>Advertising</h5>
+                        <p class="Advertising_text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi.
+                        </p>
+                        <p class="orderr" style="color: #ffb400;">ORDER NOW ></p>
+                    </div>
+                </div>
+            </div>
+        <!-- </div> -->
     </div>
+
     <div class="right-frame white">
         <div class="buttons">
-            <div class="theme_switch ">
+            <div class="theme_switch">
                 <a href="#"><i class="fa-solid fa-circle-half-stroke"></i></a>
             </div>
             <div class="home-button round">
                 <a href="#">
-                    <span class="home-label">Home</span> 
-                    <i class="fa-solid fa-house"></i> 
+                    <span class="home-label">Home</span>
+                    <i class="fa-solid fa-house"></i>
                 </a>
             </div>
             <div class="projects-button round">

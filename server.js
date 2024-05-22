@@ -2,10 +2,17 @@ const express = require("express");
 const app = express();
 const http = require("http");
 const fs = require("fs");
-const path = require("path")
+const path = require("path");
+
+app.use(express.static(path.join(__dirname, 'public'))); // Ensure 'public' directory is correctly specified
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.set("views", path.join(__dirname, 'views'));
+app.set("view engine", "ejs");
 
 let user;
- 
+
 function loadUserData(callback) {
   fs.readFile("database/user.json", "utf8", (err, data) => {
     if (err) {
@@ -17,14 +24,6 @@ function loadUserData(callback) {
     }
   });
 }
-
-app.use(express.static("public"));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-app.set("views", "views");
-app.set("view engine", "ejs");
-app.set('views', path.join(__dirname, 'views'));
 
 app.get("/author", (req, res) => {
   // Load user data before rendering
