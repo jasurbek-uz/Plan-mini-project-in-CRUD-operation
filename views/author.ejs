@@ -162,21 +162,77 @@
     </div>
     
     <div class="middle-frame ">
-        <div class="job-info">
-            <div class="job-position">
-                <h2><%=user.profession%> at <%=user.work_place%></h2>
+        <div class="upper-frame">
+            <div class="job-info">
+                <div class="job-position">
+                    <h2><%=user.profession%> at <%=user.work_place%></h2>
+                </div>
+                <div class="job-description">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt ullam incidunt illum repellendus odio aliquam quasi quisquam, labore, error suscipit accusantium! Quis aliquam temporibus vel nemo nobis, doloremque error sapiente.</p>
+                </div>
+                <div class="hire-button">
+                    <button>HIRE ME -></button>
+                </div>
             </div>
-            <div class="job-description">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt ullam incidunt illum repellendus odio aliquam quasi quisquam, labore, error suscipit accusantium! Quis aliquam temporibus vel nemo nobis, doloremque error sapiente.</p>
-            </div>
-            <div class="hire-button">
-                <button>HIRE ME -></button>
+            <div class="prof-image">
+                <img src="/images/profile.svg" alt="">
             </div>
         </div>
-        <div class="prof-image">
-            <img src="/images/profile.svg" alt="">
+        <div class="lower-frame">
+            <div class="services">
+                <div class="services_to_center">
+                    <h1>My Services</h1>
+                    <p>
+                        <%=user.service_desc%>
+                    </p>
+                </div>
+            
+                <div class="myservice-container">
+                    <div class="myservice">
+                        <img class="image" src="/box_images/coding.svg" alt="photo" />
+                        <h5>Web development</h5>
+                        <p>Blog, E-commerce</p>
+                    </div>
+            
+                    
+                    <div class="myservice">
+                        <img src="/box_images/illustration.png" alt="" />
+                        <h5>UI/UX Design</h5>
+                        <p>Mobile app, website design</p>
+                    </div>
+            
+                    <div class="myservice">
+                        <img src="/box_images/microphone.png" alt="" />
+                        <h5>Sound Design</h5>
+                        <p>Voice Over, Beat Making</p>
+                    </div>
+            
+                    <div class="myservice">
+                        <img src="/box_images/game.png" alt="" />
+                        <h5>Game Design</h5>
+                        <p>Character Design, Props & Objects</p>
+                    </div>
+            
+                    <div class="myservice">
+                        <img src="/box_images/Photographer.png" alt="" />
+                        <h5>photography</h5>
+                        <p>portrait, product photography</p>
+                    </div>
+            
+                    <div class="myservice">
+                        <h5>Advertising</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae
+                            nulla diam in ac dictum a urna
+                        </p>
+                        <p style="color: #ffb400; border: 0.5px solid rgb(255, 180, 0);border-radius: 30px;"
+                            ,>ORDER NOW > </p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+        </div>
+
     <div class="right-frame white">
         <div class="buttons">
             <div class="theme_switch ">
@@ -212,6 +268,15 @@
                     <i class="fa-solid fa-message"></i>
                 </a>
             </div>
+
+
+            
+
+
+          
+
+
+
         </div>
     </div>
 </body>
