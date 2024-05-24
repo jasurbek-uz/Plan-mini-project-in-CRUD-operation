@@ -45,6 +45,7 @@ if (err) {
 }
   });
 });
+
 app.get('./', function (req, res){
   db.collection("palns").find().toArray((err, data) => {
 if(err) {

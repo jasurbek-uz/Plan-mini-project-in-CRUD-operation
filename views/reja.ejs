@@ -31,7 +31,26 @@
         </div>
 
 
-        <button id="clean all" class="btn btn-danger" style="border-radius: 20px;"> Hamma Rejalarni Ochirish </button>
+        <ul id="item-list" class="list-group pb-5">
+            <% items.map(item=> { %>
+                <li style="margin-bottom: 4px;"
+                    class="list-group-item list-group-item-info align-items-center d-flex justify-content-between">
+                    <span class="item-text">
+                        <%= item.plan %>
+                    </span>
+                    <div>
+                        <button data-id="<%= item.id %>" class="edit-me btn btn-secondary"
+                            style="border-radius: 4px; margin-top: 10px; padding: 2px 10px 2px 10px">Edit</button>
+                        <button data-id="<%= item.id %>" class="delete-me btn btn-danger"
+                            style="border-radius: 4px; margin-top: 10px; padding: 2px 10px 2px 10px">
+                            delete
+                        </button>
+                    </div>
+                </li>
+                <% }); %>
+        </ul>
+
+        </ul>
     </div>
 </body>
 </html>
