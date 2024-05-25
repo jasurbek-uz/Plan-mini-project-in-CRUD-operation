@@ -4,6 +4,7 @@ const app = express();
 
 // Call MongoDB
 const db = require("./server").db();
+const mongodb = require("mongodb");
 
 app.use(express.static("public"));
 app.use(express.json());
@@ -19,8 +20,19 @@ app.post("/create-item", (req, res) => {
   const new_plan = req.body.reja;
   console.log(new_plan)
   db.collection("plan").insertOne({ plan: new_plan }, (err, data) => {
-    res.json(data,ops[0]);
+    res.json(data.ops[0]);
   });
+});
+
+app.post("/delete-item", (req, res) => {
+ const id =req.body.id;
+ db.collection("plans").deleteOne ({_id: new mongodb.ObjectId(id)}, 
+ function(err, data) {
+  res.json({state:"sccess"});
+  }
+ )
+//  console.log(id);
+//  res.send("done");
 });
 
 app.get("/", function (req, res) {

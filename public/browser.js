@@ -1,39 +1,55 @@
-console.log("FrontEnd qismi ishga tushdi")
+console.log("FrontEnd JS ishga tushdi");
 
-function itemTemplate(item) {
-    return `<li style="margin-bottom: 4px;"
-    class="list-group-item list-group-item-info align-items-center d-flex justify-content-between">
-    <span class="item-text">
-        ${item.plan}
-    </span>
+let createField = document.getElementById("create-field");
+
+function itemTemplate(data) {
+    return (`<li
+    class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
+    <span class="item-text">${data.reja}</span>
     <div>
-        <button data-id="${item.id}" class="edit-me btn btn-secondary"
-            style="border-radius: 4px; margin-top: 10px; padding: 2px 10px 2px 10px">Edit</button>
-        <button data-id="${item.id}" class="delete-me btn btn-danger"
-            style="border-radius: 4px; margin-top: 10px; padding: 2px 10px 2px 10px">
-            delete
-        </button>
+      <button data-id="${data._id}" class="edit-me btn btn-secondary btn-sm mr-1">
+        O'zgartirish
+      </button>
+      <button data-id="${data._id}" class="delete-me btn btn-danger btn-sm">O'chirish</button>
     </div>
-</li>`;
+  </li>`);
 }
 
-let createField = document.getElementById("create-field")
- 
-document
-.getElementById("create-form")
-.addEventListener("sumbit", function(e){
-e.preventDefault();
+document.getElementById("create-form").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-axios
-.post("/create-item", { reja: createField.value })
-.then((response) => {
-    document
-    .getElementById("item-list")
-    .insertAdjacentHTML("beforeend", itemTemplate(response.data));
-    createField.value = "";
-    createField.focus();
+  axios.post("/create-item", { reja: createField.value })
+    .then((response) => {
+      document.getElementById("item-list").insertAdjacentHTML(
+        "beforeend",
+        itemTemplate(response.data)
+      );
+      createField.value = "";
+      createField.focus();
+    })
+    .catch((err) => {
+      console.log("Error creating item:", err); // More specific error handling
+    });
 });
-.catch((err) =>{
-    console.log("iltimos qaytadan harakat qiling!");
-});
+
+document.addEventListener("click", function (e) {
+  // Delete operation (assuming response is defined within the scope)
+  if (e.target.classList.contains("delete-me")) {
+    if (confirm("Aniq o'chirmoqchimisiz?")) {
+      axios.post("/delete-item", { id: e.target.getAttribute("data-id") })
+        .then((response) => { 
+          console.log("Item deleted successfully:", response.data);
+          e.target.parentElement.parentElement.remove();
+        })
+        .catch((err) => {
+          console.log("Error deleting item:", err);
+        });
+    }
+  }
+
+  // Edit operation (placeholder for actual editing logic)
+  if (e.target.classList.contains("edit-me")) {
+    // Implement logic to fetch item data, display edit form, handle updates
+    alert("Edit functionality is not yet implemented.");
+  }
 });
