@@ -52,6 +52,15 @@ shop.qabul('cola', 4);
 console.log(shop.qoldiq());
 
 
+
+
+
+
+
+
+
+
+
 // B task 
  // Shunday, function tuzingki, bu function yagona parametrga ega bo'lib
 // string tarkibidagi sonlar miqdorini qaytarsin

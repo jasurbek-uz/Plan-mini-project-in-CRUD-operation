@@ -1,3 +1,4 @@
+
 console.log("FrontEnd JS ishga tushdi");
 
 let createField = document.getElementById("create-field");
@@ -31,9 +32,9 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
       console.log("Error creating item:", err); // More specific error handling
     });
 });
-
+// delete item
 document.addEventListener("click", function (e) {
-  // Delete operation (assuming response is defined within the scope)
+  // Delete operation 
   if (e.target.classList.contains("delete-me")) {
     if (confirm("Aniq o'chirmoqchimisiz?")) {
       axios.post("/delete-item", { id: e.target.getAttribute("data-id") })
@@ -47,9 +48,8 @@ document.addEventListener("click", function (e) {
     }
   }
 
-  // Edit operation (placeholder for actual editing logic)
+  // Edit operation 
   if (e.target.classList.contains("edit-me")) {
-    // Implement logic to fetch item data, display edit form, handle updates
     alert("Edit functionality is not yet implemented.");
   }
 });
