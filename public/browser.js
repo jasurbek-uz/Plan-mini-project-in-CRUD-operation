@@ -4,9 +4,10 @@ console.log("FrontEnd JS ishga tushdi");
 let createField = document.getElementById("create-field");
 
 function itemTemplate(data) {
+  console.log(data)
     return (`<li
     class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
-    <span class="item-text">${data.reja}</span>
+    <span class="item-text">${data.plan}</span>
     <div>
       <button data-id="${data._id}" class="edit-me btn btn-secondary btn-sm mr-1">
         O'zgartirish
@@ -19,7 +20,7 @@ function itemTemplate(data) {
 document.getElementById("create-form").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  axios.post("/create-item", { reja: createField.value })
+  axios.post("/create-item", { plan: createField.value })
     .then((response) => {
       document.getElementById("item-list").insertAdjacentHTML(
         "beforeend",
@@ -50,6 +51,41 @@ document.addEventListener("click", function (e) {
 
   // Edit operation 
   if (e.target.classList.contains("edit-me")) {
-    alert("Edit functionality is not yet implemented.");
+    let userInput = prompt(
+      "Add something new or modify it!",
+      e.target.parentElement.parentElement
+        .querySelector(".item-text")
+        .innerHTML.trim()
+    );
+
+    if (userInput) {
+      axios
+        .post("/edit-item", {
+          id: e.target.getAttribute("data-id"),
+          new_input: userInput,
+        })
+        .then((response) => {
+          console.log(response.data);
+
+          e.target.parentElement.parentElement.querySelector(
+            ".item-text"
+          ).innerHTML = userInput;
+        })
+        .catch((err) => {
+          console.log("Please, try again later!");
+        });
+    }
   }
+
+
 });
+// delete all operation
+document.getElementById("clear-all").addEventListener("click", function(){
+  axios.post("/delete-all", {delete_all:true}).then(response =>{
+    alert(response.data.state);
+  
+    document.querySelectorAll('.list-group-item').forEach(item => {
+      item.remove();
+  });
+  })
+})

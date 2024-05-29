@@ -1,65 +1,85 @@
+// D task
+// Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+// MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+
+function twostring(str1, str2) {
+    return str1.split('').sort().join('') === str2.split('').sort().join('');
+}
+
+console.log(twostring("mitgroup", "gmtiprou")); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // c Task
 //shunday class tuzing nomi Shop bolsin va uni constructoriga 3 hil mahsulotga pass bolsin hamda classning 3ta methodi bolsin
 // biri qoldiq biri sotih va biri bepul har bir method ishga tushsin log qilsin 
 // masalan const shop=new shop (4.5.2);
 // shop qoldiq return 20:40da 4ta non 5ta lagmon 2ta cola shop.sotish("non",3) shop qabul("cola,4") shop qoldiq() return hzori 20;50 1ta non 5ta lagmon 6ta cola
  
+// const moment = require("moment");
+// class Shop {
+//     constructor(non, lagmon, cola) {
+//         this.mahsulotlar = {
+//             non: non,
+//             lagmon: lagmon,
+//             cola: cola
+//         };
+//     }
 
-const moment = require("moment");
-class Shop {
-    constructor(non, lagmon, cola) {
-        this.mahsulotlar = {
-            non: non,
-            lagmon: lagmon,
-            cola: cola
-        };
-    }
+//     hozirgiVaqt() {
+//         const hozir = new Date();
+//         const soat = hozir.getHours();
+//         const daqiqa = hozir.getMinutes();
+//         return `${soat < 10 ? '0' : ''}${soat}:${daqiqa < 10 ? '0' : ''}${daqiqa}`;
+//     }
 
-    hozirgiVaqt() {
-        const hozir = new Date();
-        const soat = hozir.getHours();
-        const daqiqa = hozir.getMinutes();
-        return `${soat < 10 ? '0' : ''}${soat}:${daqiqa < 10 ? '0' : ''}${daqiqa}`;
-    }
+//     log(xabar) {
+//         console.log(`Hozir ${this.hozirgiVaqt()} - ${xabar}`);
+//     }
 
-    log(xabar) {
-        console.log(`Hozir ${this.hozirgiVaqt()} - ${xabar}`);
-    }
+//     qoldiq() {
+//         const xabar = `${this.mahsulotlar.non} ta non, ${this.mahsulotlar.lagmon} ta lagmon va ${this.mahsulotlar.cola} ta cola mavjud!`;
+//         this.log(xabar);
+//         return xabar;
+//     }
 
-    qoldiq() {
-        const xabar = `${this.mahsulotlar.non} ta non, ${this.mahsulotlar.lagmon} ta lagmon va ${this.mahsulotlar.cola} ta cola mavjud!`;
-        this.log(xabar);
-        return xabar;
-    }
+//     sotish(mahsulot, miqdor) {
+//         if (this.mahsulotlar[mahsulot] >= miqdor) {
+//             this.mahsulotlar[mahsulot] -= miqdor;
+//             this.log(`${miqdor} ta ${mahsulot} sotildi.`);
+//         } else {
+//             this.log(`${mahsulot} yetarli emas!`);
+//         }
+//     }
 
-    sotish(mahsulot, miqdor) {
-        if (this.mahsulotlar[mahsulot] >= miqdor) {
-            this.mahsulotlar[mahsulot] -= miqdor;
-            this.log(`${miqdor} ta ${mahsulot} sotildi.`);
-        } else {
-            this.log(`${mahsulot} yetarli emas!`);
-        }
-    }
-
-    qabul(mahsulot, miqdor) {
-        this.mahsulotlar[mahsulot] += miqdor;
-        this.log(`${miqdor} ta ${mahsulot} qabul qilindi.`);
-    }
-}
-const shop = new Shop(4,5,2);
-shop.sotish('non', 3); 
-shop.qabul('cola', 4); 
-console.log(shop.qoldiq());
-
-
-
-
-
-
-
-
-
-
+//     qabul(mahsulot, miqdor) {
+//         this.mahsulotlar[mahsulot] += miqdor;
+//         this.log(`${miqdor} ta ${mahsulot} qabul qilindi.`);
+//     }
+// }
+// const shop = new Shop(4,5,2);
+// shop.sotish('non', 3); 
+// shop.qabul('cola', 4); 
+// console.log(shop.qoldiq());
 
 // B task 
  // Shunday, function tuzingki, bu function yagona parametrga ega bo'lib

@@ -1,25 +1,21 @@
 {
   "name": "reja",
   "version": "1.0.0",
-  "description": "devex 27th lesson",
+  "description": "bu bizning birinchi loyixamiz",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "dev": "node server.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
     "train": "nodemon train.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "Jasurbek",
+  "author": "jasurbek",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.3.1",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "moment": "^2.30.1",
-    "mongodb": "^3.2.6"
-  },
-  "devDependencies": {
+    "mongodb": "^3.2.6",
     "nodemon": "^3.1.0"
   }
 }
