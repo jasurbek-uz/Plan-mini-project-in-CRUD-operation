@@ -1,33 +1,43 @@
+//E-TASK: 
+// Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+// MASALAN: getReverse("hello") return qilsin "olleh"
+
+function getReverse(str) {
+    return str.split('').reduce((reversed, char) => char + reversed, '');
+  }
+  
+  let result = getReverse("hello");
+  console.log(result);
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // D task
 // Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
 // MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 
-function twostring(str1, str2) {
-    return str1.split('').sort().join('') === str2.split('').sort().join('');
-}
+// function twostring(str1, str2) {
+//     return str1.split('').sort().join('') === str2.split('').sort().join('');
+// }
 
-console.log(twostring("mitgroup", "gmtiprou")); 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// console.log(twostring("mitgroup", "gmtiprou")); 
 
 // c Task
 //shunday class tuzing nomi Shop bolsin va uni constructoriga 3 hil mahsulotga pass bolsin hamda classning 3ta methodi bolsin
